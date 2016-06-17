@@ -31,6 +31,7 @@ end
 
 group :development, :test do
   gem "rspec-rails"
+  gem 'faker'
 end
 
 group :test do
@@ -39,3 +40,5 @@ group :test do
   gem 'rspec-its'
 end
 gem 'draper'
+gem 'kaminari'
+gem 'pg_search'
