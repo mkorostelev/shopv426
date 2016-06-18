@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  skip_before_action :authenticate
   private
   def build_resource
     @user = User.new resource_params

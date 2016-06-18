@@ -12,4 +12,6 @@ RSpec.describe User, type: :model do
   it { should_not allow_value('test').for(:email) }
 
   it { should allow_value('test@test.com').for(:email) }
+
+  it { should have_one(:auth_token).dependent(:destroy) }
 end
