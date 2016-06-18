@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :resource, :collection
 
+  skip_before_action :verify_authenticity_token, if: :json_request?
+
+
+
   def new
        initialize_resource
   end
@@ -27,4 +31,15 @@ class ApplicationController < ActionController::Base
 
     render :exception
   end
+
+  rescue_from ActiveRecord::RecordInvalid do
+    render :errors, status: :unprocessable_entity
+  end
+
+  private
+  def json_request?
+    request.format.json?
+    #code
+  end
+
 end

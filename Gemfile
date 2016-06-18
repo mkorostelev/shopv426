@@ -42,3 +42,5 @@ end
 gem 'draper'
 gem 'kaminari'
 gem 'pg_search'
+gem 'bcrypt'
+gem 'email_validator'

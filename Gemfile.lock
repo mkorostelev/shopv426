@@ -37,6 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -49,6 +50,8 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     faker (1.6.3)
       i18n (~> 0.5)
@@ -162,8 +165,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   byebug
   draper
+  email_validator
   faker
   jbuilder (~> 2.0)
   kaminari
