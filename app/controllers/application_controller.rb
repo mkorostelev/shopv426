@@ -1,16 +1,30 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  before_action :authenticate
+
 
   protect_from_forgery with: :exception
   helper_method :resource, :collection
 
   skip_before_action :verify_authenticity_token, if: :json_request?
 
-
+  before_action :authenticate
 
   attr_reader :current_user
+
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    @exception = exception
+
+    render :exception
+  end
+
+  # rescue_from ActiveRecord::RecordInvalid do
+  #   render :errors, status: :unprocessable_entity
+  # end
+
+  rescue_from ActiveRecord::RecordInvalid, ActiveModel::StrictValidationFailed do
+    render :errors, status: :unprocessable_entity
+  end
 
   def new
        initialize_resource
@@ -28,21 +42,13 @@ class ApplicationController < ActionController::Base
 
   def destroy
      resource.destroy!
+     ###########<<<Question
+     head :ok
   end
 
-  rescue_from ActiveRecord::RecordNotFound do |exception|
-    @exception = exception
 
-    render :exception
-  end
 
-  rescue_from ActiveRecord::RecordInvalid do
-    render :errors, status: :unprocessable_entity
-  end
 
-  rescue_from ActiveRecord::RecordInvalid, ActiveModel::StrictValidationFailed do
-    render :errors, status: :unprocessable_entity
-  end
 
   private
   def json_request?
