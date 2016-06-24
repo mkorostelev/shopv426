@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  has_many :purchases, dependent: :destroy
   include PgSearch
 
   pg_search_scope :search,
@@ -14,8 +15,8 @@ class Product < ActiveRecord::Base
     def search_by params = {}
       params = params.try(:symbolize_keys) || {}
 
-      collection = page(params[:page]) # <<< QUESTION: if its will be a query to base?
-      # If yes - we need to use if-else
+      collection = page(params[:page])
+      
       if params[:term].present?
         collection = collection.where('name ILIKE ?', "#{params[:term]}%")
       end
@@ -24,7 +25,7 @@ class Product < ActiveRecord::Base
         collection = collection.search(params[:name])
       end
 
-      collection # <<< QUESTION
+      collection
       #code
     end
   end

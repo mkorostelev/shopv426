@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: { case_sensitive: false }, email: true
 
   has_one :auth_token, dependent: :destroy
+  has_many :purchases, dependent: :destroy
  end
