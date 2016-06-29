@@ -280,6 +280,9 @@
         1,
         null,
         1,
+        1,
+        null,
+        null,
         null,
         null
       ],
@@ -344,7 +347,7 @@
         0,
         null,
         null,
-        1,
+        null,
         1,
         3,
         null,
@@ -352,7 +355,10 @@
         null,
         1,
         0,
+        null,
         0,
+        null,
+        null,
         null,
         null,
         null,
@@ -691,6 +697,24 @@
         1,
         null
       ],
+      "/home/maks/Dropbox/Ruby/study/4_2_6/shop/spec/models/order_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/maks/Dropbox/Ruby/study/4_2_6/shop/app/models/order.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
       "/home/maks/Dropbox/Ruby/study/4_2_6/shop/spec/models/product_spec.rb": [
         1,
         null,
@@ -733,8 +757,11 @@
         1,
         1,
         null,
+        null,
+        null,
         1,
-        0,
+        null,
+        null,
         null,
         null
       ],
@@ -758,6 +785,6 @@
         null
       ]
     },
-    "timestamp": 1466697614
+    "timestamp": 1466851410
   }
 }

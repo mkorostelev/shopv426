@@ -6,7 +6,8 @@ class PurchaseDecorator < Draper::Decorator
         id: id,
         product_id: product_id,
         user_id: user_id,
-        quantity: quantity
+        quantity: quantity,
+        order_id: order_id
        }
      end
    end

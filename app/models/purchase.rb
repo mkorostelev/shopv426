@@ -5,7 +5,7 @@ class Purchase < ActiveRecord::Base
 
 
 
-  def fill_current_user
+  def fill_current_user #<<<Question can`t get @current_user variable from MODEL
     # byebug
     # self.user_id = @current_user.id
   end

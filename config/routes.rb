@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
      resources :purchases, only: [:index, :show, :create, :destroy]
      match '/purchases/drop' => 'purchases#destroy', via: :post
+
+     resources :orders, only: [:index, :show, :create, :update]
    end
 
 
