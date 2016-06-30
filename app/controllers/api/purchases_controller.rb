@@ -6,40 +6,21 @@ class Api::PurchasesController < ApplicationController
   end
 
   def create
-    currPurchase = Purchase.find_by(user_id: @current_user.id,
-                                  product_id: params["purchase"]["product_id"])
-    if !currPurchase
-      super
-    else
-      currPurchase.update_attribute(:quantity,
-                    currPurchase.quantity + params["purchase"]["quantity"].to_i)
-    end
+    super
 
     render "purchases/index"
   end
 
   def destroy
-    currPurchase = Purchase.find_by(user_id: @current_user.id,
-                                  product_id: params["purchase"]["product_id"])
-    if !currPurchase
-      render text: "No data with such parameters!"
-    else
-      if currPurchase.quantity == params["purchase"]["quantity"].to_i
-        currPurchase.destroy
-      else
-        currPurchase.update_attribute(:quantity,
-                      currPurchase.quantity - params["purchase"]["quantity"].to_i)
-      end
-    end
+    PurchaseHandler.new(resource_params.merge(user_id: current_user.id)).reduce
 
     render "purchases/index"
   end
 
   private
   def build_resource
-    # byebug
     params["purchase"]["user_id"] = @current_user.id
-    @purchase = Purchase.new resource_params
+    @purchase = PurchaseHandler.new(resource_params.merge(user_id: current_user.id)).build
   end
 
   def resource
@@ -52,7 +33,7 @@ class Api::PurchasesController < ApplicationController
 
   def collection
 
-    @collection ||= Purchase.where(user_id: @current_user.id).page(params[:page]).per(5)
+    @collection ||= Purchase.where(user_id: current_user.id, order_id: nil).page(params[:page]).per(5)
 
   end
   #code
