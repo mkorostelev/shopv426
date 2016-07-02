@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
      resources :products, only: [:index, :show]
 
-     resource :user, only: [:create]
+     resource :user, only: [:create, :update]
 
      resource :session, only: [:create, :destroy]
 
@@ -11,6 +11,9 @@ Rails.application.routes.draw do
      match '/purchases/drop' => 'purchases#destroy', via: :post
 
      resources :orders, only: [:index, :show, :create, :update]
+
+     match '/profile/balance' => 'users#update', via: :patch
+     match '/orders/:id/payment' => 'orders#update', via: :post
    end
 
 
