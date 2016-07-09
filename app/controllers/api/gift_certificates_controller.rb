@@ -1,10 +1,6 @@
 class Api::GiftCertificatesController < ApplicationController
   def generate
-
-    params[:quantity].to_i.times do
-      gift_certificate = GiftCertificate.create amount: params[:amount].to_i
-      gift_certificate.save!
-    end
+    GiftCertificateHandler.new(params).generate
     render "orders/index"
   end
 
