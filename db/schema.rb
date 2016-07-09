@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630191540) do
+ActiveRecord::Schema.define(version: 20160707184742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20160630191540) do
   end
 
   add_index "auth_tokens", ["user_id"], name: "index_auth_tokens_on_user_id", using: :btree
+
+  create_table "gift_certificates", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "order_id"
+    t.integer  "amount",     default: 0
+    t.string   "token"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "gift_certificates", ["order_id"], name: "index_gift_certificates_on_order_id", using: :btree
+  add_index "gift_certificates", ["token"], name: "index_gift_certificates_on_token", unique: true, using: :btree
+  add_index "gift_certificates", ["user_id"], name: "index_gift_certificates_on_user_id", using: :btree
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
@@ -67,6 +80,8 @@ ActiveRecord::Schema.define(version: 20160630191540) do
   end
 
   add_foreign_key "auth_tokens", "users"
+  add_foreign_key "gift_certificates", "orders"
+  add_foreign_key "gift_certificates", "users"
   add_foreign_key "orders", "users"
   add_foreign_key "purchases", "orders"
   add_foreign_key "purchases", "products"

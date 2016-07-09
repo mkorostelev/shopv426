@@ -6,8 +6,9 @@ class Order < ActiveRecord::Base
   }
   belongs_to :user
   has_many :purchases, dependent: :destroy
+  has_many :gift_certificates
   validates_presence_of :purchases
-  
+
   after_create :fill_order_id_in_purchases
 
   def fill_order_id_in_purchases

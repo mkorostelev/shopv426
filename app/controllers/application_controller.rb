@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def new
-       initialize_resource
+    initialize_resource
   end
 
   def create

@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   has_one :auth_token, dependent: :destroy
   has_many :purchases, dependent: :destroy
   has_many :orders, dependent: :destroy
+  has_many :gift_certificates
  end

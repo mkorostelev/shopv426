@@ -4,6 +4,7 @@ Rails.application.routes.draw do
      resources :products, only: [:index, :show]
 
      resource :user, only: [:create, :update]
+     match '/profile/balance' => 'users#update', via: :patch
 
      resource :session, only: [:create, :destroy]
 
@@ -11,9 +12,10 @@ Rails.application.routes.draw do
      match '/purchases/drop' => 'purchases#destroy', via: :post
 
      resources :orders, only: [:index, :show, :create, :update]
-
-     match '/profile/balance' => 'users#update', via: :patch
      match '/orders/:id/payment' => 'orders#update', via: :post
+
+     resources :gift_certificates
+     match '/gift_certificates/generate' => 'gift_certificates#generate', via: :post
    end
 
 
