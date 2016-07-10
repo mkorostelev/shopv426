@@ -1,4 +1,4 @@
-class Order < ActiveRecord::Base
+  class Order < ActiveRecord::Base
   enum status: {
     "Pending"   => 0,
     "Accepted"  => 1,
@@ -8,6 +8,11 @@ class Order < ActiveRecord::Base
   has_many :purchases, dependent: :destroy
   has_many :gift_certificates
   validates_presence_of :purchases
+  validates :status, inclusion: statuses.keys
+  validates :amount, :numericality => { :greater_than_or_equal_to => 0 }
+  validates :paid_with_bonuses, :numericality => { :greater_than_or_equal_to => 0 }
+  validates :paid_with_certificates, :numericality => { :greater_than_or_equal_to => 0 }
+  validates :received_bonuses, :numericality => { :greater_than_or_equal_to => 0 }
 
   after_create :fill_order_id_in_purchases
 

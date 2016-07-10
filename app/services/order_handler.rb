@@ -19,6 +19,7 @@ class OrderHandler
 
     if !certificates_are_valid
       render json: "certificates are invalid", status: :unprocessable_entity
+      # order.errors.add(:gift_certificates, "certificates are invalid") #if !certificates_are_valid
       return
     end
 
