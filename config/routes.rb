@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
      resources :gift_certificates
      match '/gift_certificates/generate' => 'gift_certificates#generate', via: :post
+     match '/gift_certificates/connect_to_user' => 'gift_certificates#connect_to_user', via: :post
    end
 
 

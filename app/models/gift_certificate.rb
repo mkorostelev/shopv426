@@ -5,6 +5,7 @@ class GiftCertificate < ActiveRecord::Base
   before_validation :fill_token
 
   scope :unordered, -> { where(order_id: nil)  }
+  scope :unconnected, -> { where(user_id: nil)  }
 
   def fill_token
     if token.nil?

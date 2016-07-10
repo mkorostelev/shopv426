@@ -4,6 +4,12 @@ class Api::GiftCertificatesController < ApplicationController
     render "orders/index"
   end
 
+  def connect_to_user
+    byebug
+    GiftCertificateHandler.new(params).connect_to_user
+    render "orders/index"
+  end
+
   private
   def build_resource
     @gift_certificate = GiftCertificate.new resource_params
