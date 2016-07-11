@@ -8,8 +8,6 @@ class GiftCertificate < ActiveRecord::Base
   scope :unconnected, -> { where(user_id: nil)  }
 
   def fill_token
-    if token.nil?
-      self.token = SecureRandom.uuid
-    end
+    self.token ||= SecureRandom.uuid
   end
 end
