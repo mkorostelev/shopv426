@@ -49,10 +49,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate
     authenticate_or_request_with_http_token do |token, options|
-      # byebug
       @current_user = User.joins(:auth_token).find_by(auth_tokens: { value: token })
-      # session[:user_id] = @current_user.id
-      # byebug
     end
   end
 

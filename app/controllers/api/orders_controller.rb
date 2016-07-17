@@ -9,10 +9,10 @@ class Api::OrdersController < ApplicationController
     render "orders/index"
   end
 
-  def update
-    OrderHandler.new(params.merge(current_user: current_user)).build
-    render "orders/index"
-  end
+  # def update
+  #   OrderHandler.new(params.merge(current_user: current_user)).build
+  #   render "orders/index"
+  # end
 
   private
   def build_resource
@@ -25,6 +25,6 @@ class Api::OrdersController < ApplicationController
   end
 
   def collection
-    @collection ||= Order.where(user_id: @current_user.id).page(params[:page]).per(5)
+    @collection ||= Order.all
   end
 end

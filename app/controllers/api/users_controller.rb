@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
   # Variant 2
   def update
 
-    current_user.increment(:balance, params[:amount].to_i)
+    current_user.increment(:balance, increment_balance_params[:amount].to_i)
     current_user.save
     resource
   end
@@ -23,5 +23,9 @@ class Api::UsersController < ApplicationController
 
   def resource_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def increment_balance_params
+    params.permit(:amount)
   end
 end

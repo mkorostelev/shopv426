@@ -11,7 +11,7 @@ class Api::PurchasesController < ApplicationController
     render "purchases/index"
   end
 
-  def destroy
+  def drop
     PurchaseHandler.new(resource_params.merge(user_id: current_user.id)).reduce
 
     render "purchases/index"

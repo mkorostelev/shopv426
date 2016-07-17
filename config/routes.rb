@@ -1,22 +1,40 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
-     resources :products, only: [:index, :show]
+    # products
+    resources :products, only: [:index, :show]
 
-     resource :user, only: [:create, :update]
-     match '/profile/balance' => 'users#update', via: :patch
+    #  user
+    resource :user, only: [:create, :update]
+    patch '/profile/balance' => 'users#update'
+    # match '/profile/balance' => 'users#update', via: :patch
 
-     resource :session, only: [:create, :destroy]
+    # session
+    resource :session, only: [:create, :destroy]
 
-     resources :purchases, only: [:index, :show, :create, :destroy]
-     match '/purchases/drop' => 'purchases#destroy', via: :post
+    #  purchases
+    resources :purchases, only: [:index, :show, :create, :destroy] do
+      post 'drop', on: :collection
+    end
+    # match '/purchases/drop' => 'purchases#destroy', via: :post
 
-     resources :orders, only: [:index, :show, :create, :update]
-     match '/orders/:id/payment' => 'orders#update', via: :post
+    #  orders
+    resources :orders, only: [:index, :show, :create, :update] do
+      resource :payment, only: :update
+      # post 'payment', on: :member, to: 'payments#payment'
+    end
+    # payment
 
-     resources :gift_certificates
-     match '/gift_certificates/generate' => 'gift_certificates#generate', via: :post
-     match '/gift_certificates/connect_to_user' => 'gift_certificates#connect_to_user', via: :post
+    # post '/orders/:id/payment' => 'payments#payment'
+    # match '/orders/:id/payment' => 'orders#update', via: :post
+
+    #  gift_certificates
+    resources :gift_certificates do
+    # resource :gift_certificates, only: :create do
+      # resource :generate, only: :create, to: 'gift_certificates#generate'
+      post 'generate', on: :collection
+      # post 'generate', to: 'gift_certificates#generate'
+    end
    end
 
 
