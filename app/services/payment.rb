@@ -52,7 +52,6 @@ class Payment
 
   def get_certificates_payment_amount
     used_certificates.sum(:amount)
-    # certificates_payment_amount = [used_certificates.sum(:amount), amount_left_to_pay].min
   end
 
   def used_certificates
@@ -62,4 +61,5 @@ class Payment
   def decorate
     order
   end
+
 end

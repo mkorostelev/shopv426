@@ -1,4 +1,5 @@
 class PurchaseHandler
+  include ActiveModel::Validations
   attr_reader :quantity, :product_id, :user_id
 
   def initialize params = {}
@@ -12,6 +13,9 @@ class PurchaseHandler
   def build
     purchase = Purchase.unordered.find_or_initialize_by(user_id: user_id, product_id: product_id)
     purchase.increment(:quantity, quantity)
+    purchase.price = purchase.product.price
+    purchase.amount = purchase.price * purchase.quantity
+    purchase
   end
 
   def reduce
@@ -20,4 +24,5 @@ class PurchaseHandler
     purchase.save
     purchase.destroy unless purchase.quantity > 0
   end
+
 end

@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+  include Pundit
 
   protect_from_forgery with: :exception
   helper_method :resource, :collection
@@ -52,5 +51,7 @@ class ApplicationController < ActionController::Base
       @current_user = User.joins(:auth_token).find_by(auth_tokens: { value: token })
     end
   end
+
+
 
 end

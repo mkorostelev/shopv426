@@ -1,18 +1,22 @@
 class Api::OrdersController < ApplicationController
-  # skip_before_action :authenticate
 
+  # in PaymentController now
   # def payment
   #   OrderHandler.new(params.merge(current_user: current_user)).build
+  # end
+
+  # def update
+  #   OrderHandler.new(params.merge(current_user: current_user)).build
+  #   render "orders/index"
   # end
 
   def index
     render "orders/index"
   end
 
-  # def update
-  #   OrderHandler.new(params.merge(current_user: current_user)).build
-  #   render "orders/index"
-  # end
+  def check
+    render "orders/show"
+  end
 
   private
   def build_resource
@@ -21,7 +25,7 @@ class Api::OrdersController < ApplicationController
   end
 
   def resource
-    @order
+    @order = Order.find(params[:id])
   end
 
   def collection

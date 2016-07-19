@@ -1,8 +1,4 @@
 class Api::PaymentsController < ApplicationController
-  # def update
-  #   Payment.new(resource_params.merge(current_user: current_user)).build
-  #   render "orders/index"
-  # end
 
   private
 

@@ -1,11 +1,27 @@
 class Api::UsersController < ApplicationController
-  skip_before_action :authenticate, only: [:create]
-  # Variant 2
-  def update
 
+  skip_before_action :authenticate, only: [:create]
+
+  include ActiveModel::Validations
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  validate do |model|
+    model.errors.add :password, 'not found'
+  end
+
+  def update
+    authorize User
+    # raise ActiveModel::StrictValidationFailed unless valid?
     current_user.increment(:balance, increment_balance_params[:amount].to_i)
     current_user.save
     resource
+  end
+
+  def user_not_authorized
+    # render :errors, status: :unprocessable_entity
+    errors.add :base, 'access denied'
+    render :errors, status: :unprocessable_entity
+    # raise ActiveModel::StrictValidationFailed
   end
 
   private
@@ -14,10 +30,6 @@ class Api::UsersController < ApplicationController
   end
 
   def resource
-    # Variant 1
-    # <<<QUESTION if I use standart method of user - system want paramrter "user" in curl
-    # current_user.increment(:balance, params[:user][:amount].to_i)
-    # @user = current_user
     @user = current_user
   end
 
@@ -28,4 +40,5 @@ class Api::UsersController < ApplicationController
   def increment_balance_params
     params.permit(:amount)
   end
+
 end

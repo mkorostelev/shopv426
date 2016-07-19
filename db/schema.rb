@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717134132) do
+ActiveRecord::Schema.define(version: 20160718174621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(version: 20160717134132) do
     t.integer  "paid_with_certificates", default: 0
     t.integer  "received_bonuses",       default: 0
     t.integer  "paid_with_real_money",   default: 0
+    t.integer  "discount_percent",       default: 0
+    t.integer  "discount_amount",        default: 0
+    t.integer  "amount_to_pay",          default: 0
   end
 
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
@@ -62,9 +65,14 @@ ActiveRecord::Schema.define(version: 20160717134132) do
     t.integer  "product_id"
     t.integer  "user_id"
     t.integer  "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "order_id"
+    t.integer  "price",            default: 0
+    t.integer  "amount",           default: 0
+    t.integer  "discount_percent", default: 0
+    t.integer  "discount_amount",  default: 0
+    t.integer  "amount_to_pay",    default: 0
   end
 
   add_index "purchases", ["order_id"], name: "index_purchases_on_order_id", using: :btree
@@ -79,6 +87,7 @@ ActiveRecord::Schema.define(version: 20160717134132) do
     t.datetime "updated_at",                  null: false
     t.integer  "balance",         default: 0
     t.integer  "bonus_points",    default: 0
+    t.integer  "role"
   end
 
   add_foreign_key "auth_tokens", "users"

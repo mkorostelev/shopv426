@@ -45,3 +45,5 @@ gem 'pg_search'
 gem 'bcrypt'
 gem 'email_validator'
 gem 'simplecov', :require => false, :group => :test
+
+gem 'pundit'

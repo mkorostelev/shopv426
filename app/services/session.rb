@@ -5,11 +5,8 @@ class Session
 
   def initialize params
     params = params.try(:symbolize_keys) || {}
-
     @user = params[:user]
-
     @email = params[:email]
-
     @password = params[:password]
   end
 
