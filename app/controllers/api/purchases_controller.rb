@@ -10,16 +10,15 @@ class Api::PurchasesController < ApplicationController
     render "purchases/index"
   end
 
-  def drop
-    PurchaseHandler.new(resource_params.merge(user_id: current_user.id)).reduce
-
-    render "purchases/index"
-  end
+  # def drop
+  #   PurchaseHandler.new(resource_params.merge(user_id: current_user.id)).reduce
+  #
+  #   render "purchases/index"
+  # end
 
   private
   def build_resource
-    params["purchase"]["user_id"] = @current_user.id
-    @purchase = PurchaseHandler.new(resource_params.merge(user_id: current_user.id)).build
+    @purchase = Purchase.new resource_params
   end
 
   def resource
@@ -27,7 +26,7 @@ class Api::PurchasesController < ApplicationController
   end
 
   def resource_params
-    params.require(:purchase).permit(:product_id, :user_id, :quantity)
+    params.require(:purchase).permit(:product_id, :user_id, :quantity, :order_id, :price, :amount, :discount_percent, :discount_amount, :amount_to_pay)
   end
 
   def collection

@@ -4,26 +4,29 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show]
 
     #  user
-    resource :user, only: [:create, :update]
-    patch '/profile/balance' => 'users#update'
+    resource :user, only: [:create, :update] do
+      resource :balance, only: :update
+    end
+    # patch '/profile/balance' => 'users#update'
 
     # session
     resource :session, only: [:create, :destroy]
 
     #  purchases
-    resources :purchases, only: [:index, :show, :create, :destroy] do
-      post 'drop', on: :collection
+    resources :purchases, only: [:index, :show, :create]
+    resource :purchases, only: [:create, :destroy] do
+      resource :current_purchase, only: [:create, :destroy]
     end
 
     #  orders
     resources :orders, only: [:index, :show, :create, :update] do
       resource :payment, only: :update
-      get 'check', on: :member
     end
 
     #  gift_certificates
-    resources :gift_certificates do
-      post 'generate', on: :collection
+    resources :gift_certificates
+    resource :gift_certificates do
+      resource :generate, only: :create
     end
    end
 

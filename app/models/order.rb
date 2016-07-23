@@ -1,18 +1,17 @@
   class Order < ActiveRecord::Base
   enum status: {
-    "Pending"   => 0,
-    "Accepted"  => 1,
-    "Declained" => 2
+    "pending"   => 0,
+    "accepted"  => 1,
+    "declained" => 2
   }
   belongs_to :user
   has_many :purchases, dependent: :destroy
   has_many :gift_certificates
   validates_presence_of :purchases
-  validates :status, inclusion: statuses.keys
-  validates :amount, :numericality => { :greater_than_or_equal_to => 0 }
-  validates :paid_with_bonuses, :numericality => { :greater_than_or_equal_to => 0 }
-  validates :paid_with_certificates, :numericality => { :greater_than_or_equal_to => 0 }
-  validates :received_bonuses, :numericality => { :greater_than_or_equal_to => 0 }
+  validates :amount, numericality: { greater_than_or_equal_to: 0 }
+  validates :paid_with_bonuses, numericality: { greater_than_or_equal_to: 0 }
+  validates :paid_with_certificates, numericality: { greater_than_or_equal_to: 0 }
+  validates :received_bonuses, numericality: { greater_than_or_equal_to: 0 }
 
   DISCOUNT_PERCENT_BY_INDEX = 7
   DISCOUNT_PERCENT_BY_INDEX_LIMIT = 60

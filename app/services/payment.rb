@@ -11,10 +11,10 @@ class Payment
   end
 
   def initialize params = {}
-    params = params.symbolize_keys
+    params = params&.symbolize_keys || {}
 
     @pay_with_bonuses = ActiveRecord::ConnectionAdapters::Column::TRUE_VALUES.include?(params[:pay_with_bonuses])
-    @order = Order.find_by!(id: params[:order_id], status: "Pending")
+    @order = Order.find_by!(id: params[:order_id], status: "pending")
     @current_user = params[:current_user]
     @certificates_tokens = params[:certificates_tokens].to_a
   end
@@ -35,7 +35,7 @@ class Payment
     end
 
     if order.paid_with_real_money <= current_user.balance
-      order.status = Order.statuses["Accepted"]
+      order.status = Order.statuses["accepted"]
       order.gift_certificates = used_certificates
       order.received_bonuses = order.paid_with_real_money * BONUS_POINTS_PER_SENT_INCREAMENT
       order.save

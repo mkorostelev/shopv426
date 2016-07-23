@@ -20,6 +20,10 @@ class ApplicationController < ActionController::Base
     render :errors, status: :unprocessable_entity
   end
 
+  rescue_from Pundit::NotAuthorizedError do
+    head :forbidden
+  end
+
   def new
     initialize_resource
   end
@@ -31,19 +35,18 @@ class ApplicationController < ActionController::Base
   end
 
   def update
-     resource.update! resource_params
+    resource.update! resource_params
   end
 
   def destroy
-     resource.destroy!
+    resource.destroy!
 
-     head :ok
+    head :ok
   end
 
-  # private
+  private
   def json_request?
     request.format.json?
-    #code
   end
 
   def authenticate
@@ -51,7 +54,5 @@ class ApplicationController < ActionController::Base
       @current_user = User.joins(:auth_token).find_by(auth_tokens: { value: token })
     end
   end
-
-
 
 end
