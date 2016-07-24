@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718174621) do
+ActiveRecord::Schema.define(version: 20160723174601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160718174621) do
     t.integer  "discount_percent", default: 0
     t.integer  "discount_amount",  default: 0
     t.integer  "amount_to_pay",    default: 0
+    t.integer  "line_number",      default: 0
   end
 
   add_index "purchases", ["order_id"], name: "index_purchases_on_order_id", using: :btree

@@ -4,11 +4,11 @@ class Api::UsersController < ApplicationController
 
   include ActiveModel::Validations
 
-  # def update
-  #   authorize resource
-  #
-  #   resource.increment(:balance, increment_balance_params[:amount].to_i)
-  # end
+  def update
+    authorize resource
+
+    super
+  end
 
   private
   def build_resource
@@ -16,7 +16,7 @@ class Api::UsersController < ApplicationController
   end
 
   def resource
-    @user = current_user
+    @user = User.find(params&.symbolize_keys[:id]) || current_user
   end
 
   def resource_params

@@ -18,8 +18,6 @@ class PurchaseHandler
 
     purchase = Purchase.unordered.find_or_initialize_by(user_id: user_id, product_id: product_id)
     purchase.increment(:quantity, quantity)
-    purchase.price = purchase.product.price
-    purchase.amount = purchase.price * purchase.quantity
     purchase.save
   end
 
@@ -28,8 +26,11 @@ class PurchaseHandler
 
     purchase = Purchase.unordered.find_by!(user_id: user_id, product_id: product_id)
     purchase.decrement(:quantity, quantity)
-    purchase.save
-    purchase.destroy unless purchase.quantity > 0
+    if purchase.quantity > 0
+      purchase.save
+    else
+      purchase.destroy
+    end
   end
 
   private

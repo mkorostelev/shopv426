@@ -7,6 +7,6 @@ class UserPolicy
   end
 
   def update?
-    @current_user.admin? || @current_user == @user
+    @current_user.admin? || @current_user.super_admin? || @current_user == @user
   end
 end

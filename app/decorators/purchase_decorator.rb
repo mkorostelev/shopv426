@@ -5,6 +5,7 @@ delegate_all
     if context[:short_view]
       {
         id: id,
+        line_number: line_number,
         product_id: product_id,
         user_id: user_id,
         quantity: quantity,
@@ -13,6 +14,7 @@ delegate_all
     else
       {
         id: id,
+        line_number: line_number,
         product_name: product.name,
         product_price: price,
         product_quantity: quantity,

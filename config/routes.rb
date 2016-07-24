@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show]
 
     #  user
+    resources :users, only: :update
     resource :user, only: [:create, :update] do
       resource :balance, only: :update
     end
