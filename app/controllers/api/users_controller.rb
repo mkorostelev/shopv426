@@ -4,6 +4,11 @@ class Api::UsersController < ApplicationController
 
   include ActiveModel::Validations
 
+  def create
+    # super
+    render "create"
+  end
+
   def update
     authorize resource
 

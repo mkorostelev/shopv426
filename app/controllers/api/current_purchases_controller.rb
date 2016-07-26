@@ -1,11 +1,5 @@
 class Api::CurrentPurchasesController < ApplicationController
 
-  def create
-    super
-
-    render "api/purchases/index"
-  end
-
   def destroy
     # PurchaseHandler.new(resource_params.merge(user_id: current_user_id)).destroy
     resource.destroy

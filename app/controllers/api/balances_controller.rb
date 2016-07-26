@@ -3,7 +3,7 @@ class Api::BalancesController < ApplicationController
   def update!
     super
 
-    head :ok
+    # head :ok
   end
 
   def resource

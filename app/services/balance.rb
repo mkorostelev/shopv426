@@ -15,6 +15,7 @@ class Balance
 
     current_user.increment(:balance, amount)
     current_user.save
+    self
   end
 
   def decorate
