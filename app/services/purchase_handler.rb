@@ -33,10 +33,17 @@ class PurchaseHandler
     end
   end
 
+
+  def decorate
+    Purchase.where(user_id: user_id, order_id: nil)
+  end
+
   private
 
   def validate_data
     raise ActiveModel::StrictValidationFailed unless valid?
   end
+
+
 
 end

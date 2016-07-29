@@ -12,7 +12,7 @@ class Generate
 
   end
 
-  def create
+  def save!
 
     raise ActiveModel::StrictValidationFailed unless valid?
 

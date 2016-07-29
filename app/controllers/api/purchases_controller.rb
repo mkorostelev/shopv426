@@ -10,12 +10,6 @@ class Api::PurchasesController < ApplicationController
     render "api/purchases/index"
   end
 
-  # def drop
-  #   PurchaseHandler.new(resource_params.merge(user_id: current_user.id)).reduce
-  #
-  #   render "purchases/index"
-  # end
-
   private
   def build_resource
     @purchase = PurchaseHandler.new resource_params.merge(user_id: current_user.id)

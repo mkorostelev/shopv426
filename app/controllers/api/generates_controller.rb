@@ -1,13 +1,11 @@
 class Api::GeneratesController < ApplicationController
 
-  def create
-    resource.create
-
-    # head :ok
-  end
-
-  def resource
+  def build_resource
     @generate ||= Generate.new resource_params
+  end
+  
+  def resource
+    @generate
   end
 
   private

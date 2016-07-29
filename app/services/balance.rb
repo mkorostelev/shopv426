@@ -1,6 +1,6 @@
 class Balance
   include ActiveModel::Validations
-  attr_accessor :amount, :bonus_points
+  attr_accessor :amount, :bonus_points, :this_is_payment
   attr_reader :current_user
   validates :amount, numericality: { greater_than_or_equal_to: 0 }
 
@@ -13,8 +13,8 @@ class Balance
     params = params&.symbolize_keys || {}
     @amount = params[:amount].to_i
     @bonus_points = params[:bonus_points].to_i
-    this_is_payment = params[:this_is_payment]
-    unless this_is_payment
+    @this_is_payment = params[:this_is_payment]
+    unless @this_is_payment
       raise ActiveModel::StrictValidationFailed unless valid?
     end
 

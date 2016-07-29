@@ -23,19 +23,24 @@ RSpec.describe Balance, type: :model do
   describe :update do
     context 'given amount less then 0' do
       it "raises a 'amount must be a positive integer' exception" do
-        # expect { Balance.new(user).update! amount: '-1' }.to raise_error(ActiveModel::StrictValidationFailed)
         expect { balance.update! amount: '-1' }.to raise_error(ActiveModel::StrictValidationFailed)
+      end
+    end
+
+    context 'given amount less then 0 for payment' do
+      it "raises a 'amount must be a positive integer' exception" do
+        expect { balance.update! amount: '-1', this_is_payment: true }.to_not raise_error
       end
     end
 
     context 'without params' do
       it 'without errors' do
-        # expect { Balance.new(user).update! amount: '-1' }.to raise_error(ActiveModel::StrictValidationFailed)
         expect { balance.update! }.to_not raise_error
       end
     end
   end
 
   it { expect(balance).to respond_to(:amount) }
+  it { expect(balance).to respond_to(:bonus_points) }
   it { expect(balance).to respond_to(:current_user) }
 end
