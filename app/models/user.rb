@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false }, email: true
   validates :balance, numericality: { greater_than_or_equal_to: 0 }
+  validates :bonus_points, numericality: { greater_than_or_equal_to: 0 }
 
   has_one :auth_token, dependent: :destroy
   has_many :purchases, dependent: :destroy

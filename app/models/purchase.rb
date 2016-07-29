@@ -15,7 +15,7 @@ class Purchase < ActiveRecord::Base
     self.price = product.price
     self.amount = price * quantity
     
-    if line_number.modulo(EACH_INDEX_FOR_DISCOUNT) != 0
+    if line_number.modulo(EACH_INDEX_FOR_DISCOUNT) == 0
       self.discount_percent = [line_number * DISCOUNT_PERCENT_BY_INDEX,
                                     DISCOUNT_PERCENT_BY_INDEX_LIMIT].min
     end

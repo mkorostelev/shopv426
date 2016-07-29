@@ -1,13 +1,13 @@
 class Api::PurchasesController < ApplicationController
 
   def index
-    render "purchases/index"
+    render "api/purchases/index"
   end
 
   def create
     super
 
-    render "purchases/index"
+    render "api/purchases/index"
   end
 
   # def drop
@@ -18,7 +18,7 @@ class Api::PurchasesController < ApplicationController
 
   private
   def build_resource
-    @purchase = Purchase.new resource_params
+    @purchase = PurchaseHandler.new resource_params.merge(user_id: current_user.id)
   end
 
   def resource
@@ -26,7 +26,7 @@ class Api::PurchasesController < ApplicationController
   end
 
   def resource_params
-    params.require(:purchase).permit(:product_id, :user_id, :quantity, :order_id, :price, :amount, :discount_percent, :discount_amount, :amount_to_pay)
+    params.require(:purchase).permit(:product_id, :quantity, :order_id, :price, :amount, :discount_percent, :discount_amount, :amount_to_pay)
   end
 
   def collection
