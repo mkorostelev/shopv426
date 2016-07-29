@@ -12,7 +12,7 @@ class Api::PurchasesController < ApplicationController
 
   private
   def build_resource
-    @purchase = PurchaseHandler.new resource_params.merge(user_id: current_user.id)
+    @purchase = Purchase.new resource_params
   end
 
   def resource
