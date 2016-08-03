@@ -41,8 +41,8 @@ class Payment
       order.save
 
       Balance.new(current_user).update! this_is_payment: true,
-                                        amount: - order.paid_with_real_money,
-                                        bonus_points: order.received_bonuses - order.paid_with_bonuses
+                                        bonus_points: order.received_bonuses - order.paid_with_bonuses,
+                                        amount: - order.paid_with_real_money
       # current_user.decrement(:balance, order.paid_with_real_money)
       # current_user.bonus_points = current_user.bonus_points - order.paid_with_bonuses + order.received_bonuses
       # current_user.save

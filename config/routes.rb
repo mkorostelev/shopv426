@@ -25,7 +25,7 @@ Rails.application.routes.draw do
     end
 
     #  gift_certificates
-    resources :gift_certificates
+    resources :gift_certificates, only: [:index, :show, :create, :update]
     resource :gift_certificates do
       resource :generate, only: :create
     end

@@ -1,9 +1,5 @@
 class Api::PurchasesController < ApplicationController
 
-  def index
-    render "api/purchases/index"
-  end
-
   def create
     super
 
@@ -20,7 +16,8 @@ class Api::PurchasesController < ApplicationController
   end
 
   def resource_params
-    params.require(:purchase).permit(:product_id, :quantity, :order_id, :price, :amount, :discount_percent, :discount_amount, :amount_to_pay)
+    params.require(:purchase).permit(:product_id, :quantity, :order_id, :price, :amount, :discount_percent,
+                                     :discount_amount, :amount_to_pay)
   end
 
   def collection

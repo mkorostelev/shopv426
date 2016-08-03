@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - shop_development@localhost" uuid="5128e83f-b1f6-4ed4-8124-bbdd2b5af628">
+      <secret-storage>master_key</secret-storage>
+      <user-name>maks</user-name>
+      <introspection-scope>shop_development:maks,pg_catalog,public</introspection-scope>
+      <resolve-scope>shop_development:maks,public</resolve-scope>
+    </data-source>
+    <data-source name="PostgreSQL - shop_test@localhost" uuid="b2ee5a4a-1763-46b4-9a92-e4ffd1f7ef61">
+      <secret-storage>master_key</secret-storage>
+      <user-name>maks</user-name>
+      <introspection-scope>shop_development:maks,pg_catalog,public</introspection-scope>
+      <resolve-scope>shop_development:maks,public</resolve-scope>
+    </data-source>
+  </component>
+</project>

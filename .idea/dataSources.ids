@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - shop_development@localhost" uuid="5128e83f-b1f6-4ed4-8124-bbdd2b5af628">
+    <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+      <database id="1" name="shop_development">
+        <object-id>16499</object-id>
+        <visible>1</visible>
+      </database>
+      <database id="2" name="postgres">
+        <object-id>12413</object-id>
+      </database>
+      <database id="3" name="Shop_api_development">
+        <object-id>16679</object-id>
+      </database>
+      <database id="4" name="Shop_api_test">
+        <object-id>16680</object-id>
+      </database>
+      <database id="5" name="Shop_development">
+        <object-id>16681</object-id>
+      </database>
+      <database id="6" name="Shop_origin_development">
+        <object-id>16682</object-id>
+      </database>
+      <database id="7" name="Shop_origin_test">
+        <object-id>16683</object-id>
+      </database>
+      <database id="8" name="Shop_test">
+        <object-id>16684</object-id>
+      </database>
+      <database id="9" name="final_development">
+        <object-id>16685</object-id>
+      </database>
+      <database id="10" name="final_test">
+        <object-id>16686</object-id>
+      </database>
+      <database id="11" name="sample_app_development">
+        <object-id>16687</object-id>
+      </database>
+      <database id="12" name="sample_app_test">
+        <object-id>16688</object-id>
+      </database>
+      <database id="13" name="shopv500_development">
+        <object-id>16689</object-id>
+      </database>
+      <database id="14" name="shopv500_test">
+        <object-id>16690</object-id>
+      </database>
+      <database id="15" name="pundit-app_development">
+        <object-id>17240</object-id>
+      </database>
+      <database id="16" name="pundit_app_development">
+        <object-id>17342</object-id>
+      </database>
+      <database id="17" name="pundit_app_test">
+        <object-id>17367</object-id>
+      </database>
+      <database id="18" name="pundit-app_test">
+        <object-id>17475</object-id>
+      </database>
+      <database id="19" name="Shop_api_alex_development">
+        <object-id>17519</object-id>
+      </database>
+      <database id="20" name="Shop_api_alex_test">
+        <object-id>17520</object-id>
+      </database>
+      <database id="21" name="shop_test">
+        <object-id>25944</object-id>
+      </database>
+      <schema id="22" parent="1" name="public">
+        <object-id>2200</object-id>
+        <visible>1</visible>
+        <introspection-state-number>3777</introspection-state-number>
+        <introspection-timestamp>2016-08-01.22:09:33.138</introspection-timestamp>
+      </schema>
+      <schema id="23" parent="1" name="pg_catalog">
+        <object-id>11</object-id>
+      </schema>
+      <schema id="24" parent="1" name="pg_toast">
+        <object-id>99</object-id>
+      </schema>
+      <schema id="25" parent="1" name="pg_temp_1">
+        <object-id>11816</object-id>
+      </schema>
+      <schema id="26" parent="1" name="pg_toast_temp_1">
+        <object-id>11817</object-id>
+      </schema>
+      <schema id="27" parent="1" name="information_schema">
+        <object-id>12121</object-id>
+      </schema>
+      <sequence id="28" parent="22" name="auth_tokens_id_seq">
+        <object-id>16506</object-id>
+        <state-number>1711</state-number>
+      </sequence>
+      <sequence id="29" parent="22" name="gift_certificates_id_seq">
+        <object-id>17163</object-id>
+        <state-number>2187</state-number>
+      </sequence>
+      <sequence id="30" parent="22" name="orders_id_seq">
+        <object-id>16513</object-id>
+        <state-number>1714</state-number>
+      </sequence>
+      <sequence id="31" parent="22" name="products_id_seq">
+        <object-id>16521</object-id>
+        <state-number>1717</state-number>
+      </sequence>
+      <sequence id="32" parent="22" name="purchases_id_seq">
+        <object-id>16526</object-id>
+        <state-number>1720</state-number>
+      </sequence>
+      <sequence id="33" parent="22" name="users_id_seq">
+        <object-id>16542</object-id>
+        <state-number>1724</state-number>
+      </sequence>
+      <table id="34" parent="22" name="auth_tokens">
+        <object-id>16500</object-id>
+        <state-number>1754</state-number>
+      </table>
+      <table id="35" parent="22" name="gift_certificates">
+        <object-id>17165</object-id>
+        <state-number>3585</state-number>
+      </table>
+      <table id="36" parent="22" name="orders">
+        <object-id>16508</object-id>
+        <state-number>3712</state-number>
+      </table>
+      <table id="37" parent="22" name="products">
+        <object-id>16515</object-id>
+        <state-number>1753</state-number>
+      </table>
+      <table id="38" parent="22" name="purchases">
+        <object-id>16523</object-id>
+        <state-number>3777</state-number>
+      </table>
+      <table id="39" parent="22" name="schema_migrations">
+        <object-id>16528</object-id>
+        <state-number>1722</state-number>
+      </table>
+      <table id="40" parent="22" name="users">
+        <object-id>16534</object-id>
+        <state-number>3698</state-number>
+      </table>
+      <column id="41" parent="34" name="id">
+        <state-number>2103</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;auth_tokens_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="42" parent="34" name="value">
+        <state-number>1710</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="43" parent="34" name="user_id">
+        <state-number>1710</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="44" parent="34" name="created_at">
+        <state-number>1710</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="45" parent="34" name="updated_at">
+        <state-number>1710</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <index id="46" parent="34" name="auth_tokens_pkey">
+        <object-id>16549</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="47" parent="34" name="index_auth_tokens_on_user_id">
+        <object-id>16559</object-id>
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="48" parent="34" name="auth_tokens_pkey">
+        <object-id>16550</object-id>
+        <columns>id</columns>
+        <underlying-index>auth_tokens_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="49" parent="34" name="fk_rails_0d66c22f4c">
+        <object-id>16570</object-id>
+        <columns>user_id</columns>
+        <ref-key>~.users.users_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="50" parent="35" name="id">
+        <state-number>2187</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;gift_certificates_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="51" parent="35" name="order_id">
+        <state-number>2187</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="52" parent="35" name="amount">
+        <state-number>2187</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="53" parent="35" name="token">
+        <state-number>2187</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="54" parent="35" name="created_at">
+        <state-number>2187</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="55" parent="35" name="updated_at">
+        <state-number>2187</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <index id="56" parent="35" name="gift_certificates_pkey">
+        <object-id>17173</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="57" parent="35" name="index_gift_certificates_on_token">
+        <object-id>17187</object-id>
+        <columns>token</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="58" parent="35" name="index_gift_certificates_on_order_id">
+        <object-id>17176</object-id>
+        <columns>order_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="59" parent="35" name="gift_certificates_pkey">
+        <object-id>17174</object-id>
+        <columns>id</columns>
+        <underlying-index>gift_certificates_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="60" parent="35" name="fk_rails_96a477a3d8">
+        <object-id>17182</object-id>
+        <columns>order_id</columns>
+        <ref-key>~.orders.orders_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="61" parent="36" name="id">
+        <state-number>2104</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;orders_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="62" parent="36" name="user_id">
+        <state-number>1713</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="63" parent="36" name="amount">
+        <state-number>1713</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="64" parent="36" name="status">
+        <state-number>1713</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="65" parent="36" name="created_at">
+        <state-number>1713</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="66" parent="36" name="updated_at">
+        <state-number>1713</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="67" parent="36" name="paid_with_bonuses">
+        <state-number>2230</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="68" parent="36" name="paid_with_certificates">
+        <state-number>2230</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="69" parent="36" name="received_bonuses">
+        <state-number>2230</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="70" parent="36" name="paid_with_real_money">
+        <state-number>3652</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="71" parent="36" name="discount_percent">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="72" parent="36" name="discount_amount">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="73" parent="36" name="amount_to_pay">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <index id="74" parent="36" name="orders_pkey">
+        <object-id>16551</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="75" parent="36" name="index_orders_on_user_id">
+        <object-id>16560</object-id>
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="76" parent="36" name="orders_pkey">
+        <object-id>16552</object-id>
+        <columns>id</columns>
+        <underlying-index>orders_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="77" parent="36" name="fk_rails_f868b47f6a">
+        <object-id>16585</object-id>
+        <columns>user_id</columns>
+        <ref-key>~.users.users_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="78" parent="37" name="id">
+        <state-number>2105</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;products_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="79" parent="37" name="name">
+        <state-number>1716</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="80" parent="37" name="price">
+        <state-number>1716</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="81" parent="37" name="description">
+        <state-number>1716</state-number>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="82" parent="37" name="created_at">
+        <state-number>1716</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="83" parent="37" name="updated_at">
+        <state-number>1716</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <index id="84" parent="37" name="products_pkey">
+        <object-id>16553</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="85" parent="37" name="products_pkey">
+        <object-id>16554</object-id>
+        <columns>id</columns>
+        <underlying-index>products_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="86" parent="38" name="id">
+        <state-number>2106</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;purchases_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="87" parent="38" name="product_id">
+        <state-number>1719</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="88" parent="38" name="user_id">
+        <state-number>1719</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="89" parent="38" name="quantity">
+        <state-number>1719</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="90" parent="38" name="created_at">
+        <state-number>1719</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="91" parent="38" name="updated_at">
+        <state-number>1719</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="92" parent="38" name="order_id">
+        <state-number>1719</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="93" parent="38" name="price">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="94" parent="38" name="amount">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="95" parent="38" name="discount_percent">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="96" parent="38" name="discount_amount">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="97" parent="38" name="amount_to_pay">
+        <state-number>3712</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="98" parent="38" name="line_number">
+        <state-number>3777</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <index id="99" parent="38" name="purchases_pkey">
+        <object-id>16555</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="100" parent="38" name="index_purchases_on_product_id">
+        <object-id>16562</object-id>
+        <columns>product_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="101" parent="38" name="index_purchases_on_user_id">
+        <object-id>16563</object-id>
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="102" parent="38" name="index_purchases_on_order_id">
+        <object-id>16561</object-id>
+        <columns>order_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="103" parent="38" name="purchases_pkey">
+        <object-id>16556</object-id>
+        <columns>id</columns>
+        <underlying-index>purchases_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="104" parent="38" name="fk_rails_0d630f0bc7">
+        <object-id>16565</object-id>
+        <columns>product_id</columns>
+        <ref-key>~.products.products_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="105" parent="38" name="fk_rails_2888c5cba9">
+        <object-id>16575</object-id>
+        <columns>user_id</columns>
+        <ref-key>~.users.users_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="106" parent="38" name="fk_rails_a9d81871ca">
+        <object-id>16580</object-id>
+        <columns>order_id</columns>
+        <ref-key>~.orders.orders_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="107" parent="39" name="version">
+        <state-number>1722</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar|0</data-type>
+      </column>
+      <index id="108" parent="39" name="unique_schema_migrations">
+        <object-id>16564</object-id>
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <column id="109" parent="40" name="id">
+        <state-number>2107</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;users_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="110" parent="40" name="name">
+        <state-number>1723</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="111" parent="40" name="email">
+        <state-number>1723</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="112" parent="40" name="password_digest">
+        <state-number>1723</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="113" parent="40" name="created_at">
+        <state-number>1723</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="114" parent="40" name="updated_at">
+        <state-number>1723</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="115" parent="40" name="balance">
+        <state-number>1723</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="116" parent="40" name="bonus_points">
+        <state-number>1723</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="117" parent="40" name="role">
+        <state-number>3698</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <index id="118" parent="40" name="users_pkey">
+        <object-id>16557</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="119" parent="40" name="users_pkey">
+        <object-id>16558</object-id>
+        <columns>id</columns>
+        <underlying-index>users_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="PostgreSQL - shop_test@localhost" uuid="b2ee5a4a-1763-46b4-9a92-e4ffd1f7ef61">
+    <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+      <database id="1" name="shop_test">
+        <object-id>25944</object-id>
+        <visible>1</visible>
+      </database>
+      <database id="2" name="postgres">
+        <object-id>12413</object-id>
+      </database>
+      <database id="3" name="shop_development">
+        <object-id>16499</object-id>
+      </database>
+      <database id="4" name="Shop_api_development">
+        <object-id>16679</object-id>
+      </database>
+      <database id="5" name="Shop_api_test">
+        <object-id>16680</object-id>
+      </database>
+      <database id="6" name="Shop_development">
+        <object-id>16681</object-id>
+      </database>
+      <database id="7" name="Shop_origin_development">
+        <object-id>16682</object-id>
+      </database>
+      <database id="8" name="Shop_origin_test">
+        <object-id>16683</object-id>
+      </database>
+      <database id="9" name="Shop_test">
+        <object-id>16684</object-id>
+      </database>
+      <database id="10" name="final_development">
+        <object-id>16685</object-id>
+      </database>
+      <database id="11" name="final_test">
+        <object-id>16686</object-id>
+      </database>
+      <database id="12" name="sample_app_development">
+        <object-id>16687</object-id>
+      </database>
+      <database id="13" name="sample_app_test">
+        <object-id>16688</object-id>
+      </database>
+      <database id="14" name="shopv500_development">
+        <object-id>16689</object-id>
+      </database>
+      <database id="15" name="shopv500_test">
+        <object-id>16690</object-id>
+      </database>
+      <database id="16" name="pundit-app_development">
+        <object-id>17240</object-id>
+      </database>
+      <database id="17" name="pundit_app_development">
+        <object-id>17342</object-id>
+      </database>
+      <database id="18" name="pundit_app_test">
+        <object-id>17367</object-id>
+      </database>
+      <database id="19" name="pundit-app_test">
+        <object-id>17475</object-id>
+      </database>
+      <database id="20" name="Shop_api_alex_development">
+        <object-id>17519</object-id>
+      </database>
+      <database id="21" name="Shop_api_alex_test">
+        <object-id>17520</object-id>
+      </database>
+      <schema id="22" parent="1" name="public">
+        <object-id>2200</object-id>
+        <visible>1</visible>
+        <introspection-state-number>3820</introspection-state-number>
+        <introspection-timestamp>2016-08-01.22:10:20.547</introspection-timestamp>
+      </schema>
+      <schema id="23" parent="1" name="pg_catalog">
+        <object-id>11</object-id>
+      </schema>
+      <schema id="24" parent="1" name="pg_toast">
+        <object-id>99</object-id>
+      </schema>
+      <schema id="25" parent="1" name="pg_temp_1">
+        <object-id>11816</object-id>
+      </schema>
+      <schema id="26" parent="1" name="pg_toast_temp_1">
+        <object-id>11817</object-id>
+      </schema>
+      <schema id="27" parent="1" name="information_schema">
+        <object-id>12121</object-id>
+      </schema>
+      <sequence id="28" parent="22" name="auth_tokens_id_seq">
+        <object-id>25945</object-id>
+        <state-number>3800</state-number>
+      </sequence>
+      <sequence id="29" parent="22" name="gift_certificates_id_seq">
+        <object-id>25957</object-id>
+        <state-number>3802</state-number>
+      </sequence>
+      <sequence id="30" parent="22" name="orders_id_seq">
+        <object-id>25971</object-id>
+        <state-number>3805</state-number>
+      </sequence>
+      <sequence id="31" parent="22" name="products_id_seq">
+        <object-id>25989</object-id>
+        <state-number>3807</state-number>
+      </sequence>
+      <sequence id="32" parent="22" name="purchases_id_seq">
+        <object-id>26000</object-id>
+        <state-number>3808</state-number>
+      </sequence>
+      <sequence id="33" parent="22" name="users_id_seq">
+        <object-id>26017</object-id>
+        <state-number>3812</state-number>
+      </sequence>
+      <table id="34" parent="22" name="auth_tokens">
+        <object-id>25947</object-id>
+        <state-number>3813</state-number>
+      </table>
+      <table id="35" parent="22" name="gift_certificates">
+        <object-id>25959</object-id>
+        <state-number>3814</state-number>
+      </table>
+      <table id="36" parent="22" name="orders">
+        <object-id>25973</object-id>
+        <state-number>3816</state-number>
+      </table>
+      <table id="37" parent="22" name="products">
+        <object-id>25991</object-id>
+        <state-number>3817</state-number>
+      </table>
+      <table id="38" parent="22" name="purchases">
+        <object-id>26002</object-id>
+        <state-number>3818</state-number>
+      </table>
+      <table id="39" parent="22" name="schema_migrations">
+        <object-id>26060</object-id>
+        <state-number>3819</state-number>
+      </table>
+      <table id="40" parent="22" name="users">
+        <object-id>26019</object-id>
+        <state-number>3818</state-number>
+      </table>
+      <column id="41" parent="34" name="id">
+        <state-number>3800</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;auth_tokens_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="42" parent="34" name="value">
+        <state-number>3800</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="43" parent="34" name="user_id">
+        <state-number>3800</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="44" parent="34" name="created_at">
+        <state-number>3800</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="45" parent="34" name="updated_at">
+        <state-number>3800</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <index id="46" parent="34" name="auth_tokens_pkey">
+        <object-id>25954</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="47" parent="34" name="index_auth_tokens_on_user_id">
+        <object-id>25956</object-id>
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="48" parent="34" name="auth_tokens_pkey">
+        <object-id>25955</object-id>
+        <columns>id</columns>
+        <underlying-index>auth_tokens_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="49" parent="34" name="fk_rails_0d66c22f4c">
+        <object-id>26030</object-id>
+        <columns>user_id</columns>
+        <ref-key>~.users.users_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="50" parent="35" name="id">
+        <state-number>3802</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;gift_certificates_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="51" parent="35" name="order_id">
+        <state-number>3802</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="52" parent="35" name="amount">
+        <state-number>3802</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="53" parent="35" name="token">
+        <state-number>3802</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="54" parent="35" name="created_at">
+        <state-number>3802</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="55" parent="35" name="updated_at">
+        <state-number>3802</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <index id="56" parent="35" name="gift_certificates_pkey">
+        <object-id>25967</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="57" parent="35" name="index_gift_certificates_on_token">
+        <object-id>25970</object-id>
+        <columns>token</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="58" parent="35" name="index_gift_certificates_on_order_id">
+        <object-id>25969</object-id>
+        <columns>order_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="59" parent="35" name="gift_certificates_pkey">
+        <object-id>25968</object-id>
+        <columns>id</columns>
+        <underlying-index>gift_certificates_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="60" parent="35" name="fk_rails_96a477a3d8">
+        <object-id>26035</object-id>
+        <columns>order_id</columns>
+        <ref-key>~.orders.orders_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="61" parent="36" name="id">
+        <state-number>3805</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;orders_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="62" parent="36" name="user_id">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="63" parent="36" name="amount">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="64" parent="36" name="status">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="65" parent="36" name="created_at">
+        <state-number>3805</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="66" parent="36" name="updated_at">
+        <state-number>3805</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="67" parent="36" name="paid_with_bonuses">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="68" parent="36" name="paid_with_certificates">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="69" parent="36" name="received_bonuses">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="70" parent="36" name="paid_with_real_money">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="71" parent="36" name="discount_percent">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="72" parent="36" name="discount_amount">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="73" parent="36" name="amount_to_pay">
+        <state-number>3805</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <index id="74" parent="36" name="orders_pkey">
+        <object-id>25986</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="75" parent="36" name="index_orders_on_user_id">
+        <object-id>25988</object-id>
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="76" parent="36" name="orders_pkey">
+        <object-id>25987</object-id>
+        <columns>id</columns>
+        <underlying-index>orders_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="77" parent="36" name="fk_rails_f868b47f6a">
+        <object-id>26040</object-id>
+        <columns>user_id</columns>
+        <ref-key>~.users.users_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="78" parent="37" name="id">
+        <state-number>3807</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;products_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="79" parent="37" name="name">
+        <state-number>3807</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="80" parent="37" name="price">
+        <state-number>3807</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="81" parent="37" name="description">
+        <state-number>3807</state-number>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="82" parent="37" name="created_at">
+        <state-number>3807</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="83" parent="37" name="updated_at">
+        <state-number>3807</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <index id="84" parent="37" name="products_pkey">
+        <object-id>25998</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="85" parent="37" name="products_pkey">
+        <object-id>25999</object-id>
+        <columns>id</columns>
+        <underlying-index>products_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="86" parent="38" name="id">
+        <state-number>3808</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;purchases_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="87" parent="38" name="product_id">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="88" parent="38" name="user_id">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="89" parent="38" name="quantity">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="90" parent="38" name="created_at">
+        <state-number>3808</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="91" parent="38" name="updated_at">
+        <state-number>3808</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="92" parent="38" name="order_id">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="93" parent="38" name="price">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="94" parent="38" name="amount">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="95" parent="38" name="discount_percent">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="96" parent="38" name="discount_amount">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="97" parent="38" name="amount_to_pay">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="98" parent="38" name="line_number">
+        <state-number>3808</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <index id="99" parent="38" name="purchases_pkey">
+        <object-id>26012</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="100" parent="38" name="index_purchases_on_product_id">
+        <object-id>26015</object-id>
+        <columns>product_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="101" parent="38" name="index_purchases_on_user_id">
+        <object-id>26016</object-id>
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="102" parent="38" name="index_purchases_on_order_id">
+        <object-id>26014</object-id>
+        <columns>order_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="103" parent="38" name="purchases_pkey">
+        <object-id>26013</object-id>
+        <columns>id</columns>
+        <underlying-index>purchases_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="104" parent="38" name="fk_rails_0d630f0bc7">
+        <object-id>26050</object-id>
+        <columns>product_id</columns>
+        <ref-key>~.products.products_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="105" parent="38" name="fk_rails_2888c5cba9">
+        <object-id>26055</object-id>
+        <columns>user_id</columns>
+        <ref-key>~.users.users_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="106" parent="38" name="fk_rails_a9d81871ca">
+        <object-id>26045</object-id>
+        <columns>order_id</columns>
+        <ref-key>~.orders.orders_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="107" parent="39" name="version">
+        <state-number>3819</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar|0</data-type>
+      </column>
+      <index id="108" parent="39" name="unique_schema_migrations">
+        <object-id>26066</object-id>
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <column id="109" parent="40" name="id">
+        <state-number>3812</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;users_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="110" parent="40" name="name">
+        <state-number>3812</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="111" parent="40" name="email">
+        <state-number>3812</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="112" parent="40" name="password_digest">
+        <state-number>3812</state-number>
+        <data-type>varchar|0</data-type>
+      </column>
+      <column id="113" parent="40" name="created_at">
+        <state-number>3812</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="114" parent="40" name="updated_at">
+        <state-number>3812</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp|0</data-type>
+      </column>
+      <column id="115" parent="40" name="balance">
+        <state-number>3812</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="116" parent="40" name="bonus_points">
+        <state-number>3812</state-number>
+        <data-type>integer|0</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="117" parent="40" name="role">
+        <state-number>3812</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <index id="118" parent="40" name="users_pkey">
+        <object-id>26028</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="119" parent="40" name="users_pkey">
+        <object-id>26029</object-id>
+        <columns>id</columns>
+        <underlying-index>users_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

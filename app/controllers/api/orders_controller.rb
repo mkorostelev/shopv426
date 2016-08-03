@@ -2,7 +2,7 @@ class Api::OrdersController < ApplicationController
 
   private
   def build_resource
-    @order = current_user.orders.new
+    @order = OrderHandler.new(current_user).create
   end
 
   def resource

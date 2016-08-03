@@ -10,7 +10,7 @@ class Api::GiftCertificatesController < ApplicationController
   end
 
   def resource_params
-    params.require(:gift_certificate).permit(:order_id, :amount, :token)
+    params.require(:gift_certificate).permit(:order_id, :amount)
   end
 
   def collection

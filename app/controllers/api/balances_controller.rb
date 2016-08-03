@@ -1,12 +1,5 @@
 class Api::BalancesController < ApplicationController
 
-  # def update!
-  #   byebug
-  #   super
-  #
-  #   # head :ok
-  # end
-
   def resource
     @balance ||= Balance.new current_user
   end

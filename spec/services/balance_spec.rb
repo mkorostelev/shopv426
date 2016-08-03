@@ -12,11 +12,11 @@ RSpec.describe Balance, type: :model do
   subject { balance }
 
   its(:amount) { should eq 1 }
-  its(:current_user) { should eq user }
+  its(:user) { should eq user }
 
   describe '#current_user' do
     it 'incremented balance' do
-      expect(balance.current_user.balance).to eql(1)
+      expect(balance.user.balance).to eql(1)
     end
   end
 
@@ -42,5 +42,5 @@ RSpec.describe Balance, type: :model do
 
   it { expect(balance).to respond_to(:amount) }
   it { expect(balance).to respond_to(:bonus_points) }
-  it { expect(balance).to respond_to(:current_user) }
+  it { expect(balance).to respond_to(:user) }
 end

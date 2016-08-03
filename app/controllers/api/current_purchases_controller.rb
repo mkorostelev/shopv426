@@ -24,6 +24,6 @@ class Api::CurrentPurchasesController < ApplicationController
   end
 
   def collection
-    @collection ||= Purchase.where(user_id: current_user.id, order_id: nil).page(params[:page]).per(5)
+    @collection ||= Purchase.where(user_id: current_user_id, order_id: nil).page(params[:page]).per(5)
   end
 end

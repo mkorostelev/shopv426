@@ -30,7 +30,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "rspec-rails"
+  gem 'rspec-rails'
   gem 'faker'
 end
 
@@ -47,3 +47,4 @@ gem 'email_validator'
 gem 'simplecov', :require => false, :group => :test
 
 gem 'pundit'
+gem 'rails-observers'
