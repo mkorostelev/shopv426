@@ -3,11 +3,9 @@ require 'rails_helper'
 RSpec.describe Balance, type: :model do
   it { should be_a ActiveModel::Validations }
 
-  let(:user) {User.create name: 'test2', email: 'test2@test.com', password: '12345678'}
+  let(:user) { stub_model User }
 
   let(:balance) { Balance.new(user).update! amount: '1'}
-
-  let(:user) { stub_model User }
 
   subject { balance }
 
@@ -20,8 +18,10 @@ RSpec.describe Balance, type: :model do
     end
   end
 
-  describe :update do
+  describe '#update' do
+
     context 'given amount less then 0' do
+      before  { expect(user).to receive(:save) }
       it "raises a 'amount must be a positive integer' exception" do
         expect { balance.update! amount: '-1' }.to raise_error(ActiveModel::StrictValidationFailed)
       end
@@ -41,6 +41,8 @@ RSpec.describe Balance, type: :model do
   end
 
   it { expect(balance).to respond_to(:amount) }
+
   it { expect(balance).to respond_to(:bonus_points) }
+
   it { expect(balance).to respond_to(:user) }
 end
