@@ -4,11 +4,7 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show]
 
     #  user
-    resources :users, only: :update
-    resource :user, only: [:create, :update] do
-      resource :balance, only: :update
-    end
-    # patch '/profile/balance' => 'users#update'
+    resource :user, only: [:create, :update]
 
     # session
     resource :session, only: [:create, :destroy]
@@ -31,5 +27,9 @@ Rails.application.routes.draw do
     end
    end
 
-
+  namespace :admin do
+    resources :users, only: [:update] do
+      resource :balance, only: :update
+    end
+  end
 end
