@@ -40,12 +40,12 @@ class Payment
       order.received_bonuses = order.paid_with_real_money * BONUS_POINTS_PER_SENT_INCREAMENT
       order.save
 
-      Balance.new(current_user).update! this_is_payment: true,
-                                        bonus_points: order.received_bonuses - order.paid_with_bonuses,
-                                        amount: - order.paid_with_real_money
-      # current_user.decrement(:balance, order.paid_with_real_money)
-      # current_user.bonus_points = current_user.bonus_points - order.paid_with_bonuses + order.received_bonuses
-      # current_user.save
+      # Balance.new(current_user).update! this_is_payment: true,
+      #                                   bonus_points: order.received_bonuses - order.paid_with_bonuses,
+      #                                   amount: - order.paid_with_real_money
+      current_user.decrement(:balance, order.paid_with_real_money)
+      current_user.bonus_points = current_user.bonus_points - order.paid_with_bonuses + order.received_bonuses
+      current_user.save
     else
       errors.add(:amount, 'insuficient funds')
       raise ActiveModel::StrictValidationFailed

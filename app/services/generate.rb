@@ -10,16 +10,17 @@ class Generate
     @quantity   = params[:quantity].to_i
     @amount     = params[:amount].to_i
 
+    @gift_certificates = []
+    quantity.times do
+      gift_certificate = GiftCertificate.new amount: amount
+      @gift_certificates.push(gift_certificate)
+    end
   end
 
   def save!
-
     raise ActiveModel::StrictValidationFailed unless valid?
 
-    quantity.times do
-      gift_certificate = GiftCertificate.create amount: amount
-      gift_certificate.save!
-    end
+    @gift_certificates.each(&:save!)
   end
 
   def decorate

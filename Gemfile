@@ -31,13 +31,14 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'faker'
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'rspec-activemodel-mocks'
   gem 'rspec-its'
+  gem 'faker'
 end
 gem 'draper'
 gem 'kaminari'

@@ -1,5 +1,4 @@
 class GiftCertificate < ActiveRecord::Base
-  belongs_to :user
   belongs_to :order
   validates :token, presence: true, uniqueness: true
   before_validation :fill_token
