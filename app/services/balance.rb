@@ -25,9 +25,9 @@ class Balance
 
     @bonus_points = params[:bonus_points].to_i
 
-    user.balance      += amount
+    user.increment(:balance, amount)
 
-    user.bonus_points += bonus_points
+    user.increment(:bonus_points, bonus_points)
 
     user.save
 
